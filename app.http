@@ -1,0 +1,25 @@
+@baseUrl = http://localhost:5000
+
+### Signup
+POST {{baseUrl}}/api/auth/signup
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "malek@gmail.com",
+  "password": "password123"
+}
+
+### Login
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "malek@gmail.com",
+  "password": "password123"
+}
+
+
+### Access Protected Route
+GET {{baseUrl}}/api/auth/protected
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJqb2huQGdtYWlsLmNvbSIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTc4MDM3NzAzOSwiZXhwIjoxNzgwMzgwNjM5fQ.wDj2InWJnRKUdEXYQYd2SF_wdX-jSzdLHg6XZ_r1DKU
